@@ -1,9 +1,11 @@
 import json
 
+import spaces
 import gradio as gr
 from textblob import TextBlob
 
 
+@spaces.GPU(duration=5)
 def sentiment_analysis(text: str) -> str:
     """
     Analyze the sentiment of a piece of text.
